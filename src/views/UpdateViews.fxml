@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="199.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.InsertViewController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TextField fx:id="txtSearch" layoutX="65.0" layoutY="29.0" prefHeight="25.0" prefWidth="117.0" />
+      <TextArea layoutX="206.0" layoutY="22.0" prefHeight="157.0" prefWidth="200.0" />
+      <Button fx:id="btInsert" layoutX="54.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="87.0" text="Insert" />
+      <Label layoutX="5.0" layoutY="33.0" prefHeight="17.0" prefWidth="51.0" text="Word" />
+    </children>
+</AnchorPane>
