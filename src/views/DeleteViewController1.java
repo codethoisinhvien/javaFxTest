@@ -24,20 +24,21 @@ import model.MySQLDatabase;
  *
  * @author Phongthien
  */
-public class InsertViewController implements Initializable {
+public class DeleteViewController1 implements Initializable {
   MySQLDatabase b;
   
   
     @FXML
     private Label label;
-    @FXML
     private Button btInsert;
     @FXML
     private TextField txtWord;
     @FXML
     private TextArea txtDefine;
+    @FXML
+    private Button btDelete;
 
-    public InsertViewController() throws SQLException {
+    public DeleteViewController1() throws SQLException {
         this.b = MySQLDatabase.getInstance("jdbc:mysql://localhost:3306/SINHVIEN","non-root","123" );
     }
     
@@ -45,13 +46,13 @@ public class InsertViewController implements Initializable {
     @FXML
   public void handleButtonAction(ActionEvent event) {
        
-      btInsert.setOnAction((ActionEvent event1) -> {
-          if(txtWord.getText().length()>0&&txtDefine.getText().length()>0){
+      btDelete.setOnAction((ActionEvent event1) -> {
+          if(txtWord.getText().length()>0){
           try {
-              b.insertWord(txtWord.getText(),txtDefine.getText());
-              
+              // b.insertWord(txtWord.getText(),txtDefine.getText());
+            b.detetetWord(txtWord.getText(), txtDefine.getText());
           } catch (SQLException ex) {
-              Logger.getLogger(InsertViewController.class.getName()).log(Level.SEVERE, null, ex);
+              Logger.getLogger(DeleteViewController1.class.getName()).log(Level.SEVERE, null, ex);
           }
           }else{
               System.out.println("loi");

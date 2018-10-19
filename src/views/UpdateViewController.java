@@ -24,37 +24,46 @@ import model.MySQLDatabase;
  *
  * @author Phongthien
  */
-public class InsertViewController implements Initializable {
-  MySQLDatabase b;
-  
-  
+public class UpdateViewController implements Initializable {
+ MySQLDatabase b;
     @FXML
     private Label label;
-    @FXML
     private Button btInsert;
     @FXML
     private TextField txtWord;
     @FXML
-    private TextArea txtDefine;
+    private TextArea txtDetail;
+    @FXML
+    private Button btDetail;
+    @FXML
+    private Button btWorrd;
+    @FXML
+    private TextArea txtDetail1;
+    @FXML
+    private TextField txtWord1;
 
-    public InsertViewController() throws SQLException {
+    public UpdateViewController() throws SQLException {
         this.b = MySQLDatabase.getInstance("jdbc:mysql://localhost:3306/SINHVIEN","non-root","123" );
     }
     
+    
    
-    @FXML
   public void handleButtonAction(ActionEvent event) {
        
-      btInsert.setOnAction((ActionEvent event1) -> {
-          if(txtWord.getText().length()>0&&txtDefine.getText().length()>0){
+      btWorrd.setOnAction((ActionEvent event1) -> {
+        
           try {
-              b.insertWord(txtWord.getText(),txtDefine.getText());
-              
+              b.updatetID(txtWord.getText(), "word", txtWord1.getText(), txtDetail.getText());
           } catch (SQLException ex) {
-              Logger.getLogger(InsertViewController.class.getName()).log(Level.SEVERE, null, ex);
+              Logger.getLogger(UpdateViewController.class.getName()).log(Level.SEVERE, null, ex);
           }
-          }else{
-              System.out.println("loi");
+      });
+      btDetail.setOnAction((ActionEvent event1) -> {
+        
+          try {
+              b.updatetID(txtWord.getText(), "detail", txtDetail1.getText(), txtDetail.getText());
+          } catch (SQLException ex) {
+              Logger.getLogger(UpdateViewController.class.getName()).log(Level.SEVERE, null, ex);
           }
       });
       

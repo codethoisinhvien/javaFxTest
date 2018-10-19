@@ -13,11 +13,12 @@
       <Button fx:id="btSearch" layoutX="220.0" layoutY="81.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="61.0" text="Search" />
       <Button fx:id="btInsert" layoutX="220.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="61.0" text="Insert" />
       <Button fx:id="btUpdate" layoutX="220.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="61.0" text="Update" />
-      <TextArea layoutX="311.0" layoutY="76.0" prefHeight="310.0" prefWidth="298.0" />
-      <TextField fx:id="txtSearch" layoutX="52.0" layoutY="81.0" onAction="#handleButtonAction" />
+      <TextArea fx:id="txtDefine" layoutX="311.0" layoutY="76.0" prefHeight="310.0" prefWidth="298.0" />
+      <TextField fx:id="txtSearch" layoutX="52.0" layoutY="81.0" onAction="#handleButtonAction"  />
       <ListView fx:id="listView" layoutX="47.0" layoutY="114.0" prefHeight="261.0" prefWidth="160.0" />
       <Button fx:id="btDelete" layoutX="220.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="61.0" text="Delete" />
       <Button fx:id="btspeakers" layoutX="220.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="69.0" text="speakers" />
-      <Label layoutX="6.0" layoutY="85.0" prefHeight="17.0" prefWidth="45.0" text="Word" />
+      <Label layoutX="6.0" layoutY="85.0" prefHeight="17.0" prefWidth="45.0" text="Word"  />
+     
     </children>
 </AnchorPane>
